@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    window.Telegram.WebApp.ready();
+    window.Telegram.WebApp.expand(); 
+    console.log('User:', window.Telegram.WebApp.initDataUnsafe.user);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Telegram Mini App</h1>
+      <p>Welcome, {window.Telegram.WebApp.initDataUnsafe?.user?.first_name || 'User'}!</p>
     </div>
   );
 }
