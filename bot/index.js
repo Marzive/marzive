@@ -5,7 +5,7 @@ bot.start((ctx) => {
   ctx.reply('Welcome!', {
     reply_markup: {
       inline_keyboard: [[{ text: 'Open Mini App', web_app: { url: 'https://your-mini-app-url.com' } }]],
-    },
+    }, 
   });
 });
 
