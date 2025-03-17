@@ -4,7 +4,7 @@ const bot = new Telegraf('7821663618:AAFw5br3c45sPZm0wNltv3Eq1Zno_ibo2-g'); // R
 bot.start((ctx) => {
   ctx.reply('Welcome!', {
     reply_markup: {
-      inline_keyboard: [[{ text: 'Open Mini App', web_app: { url: 'http://localhost:3000' } }]],
+      inline_keyboard: [[{ text: 'Open Mini App', web_app: { url: 'https://marzive-xllj.vercel.app' } }]],
     },
   });
 });

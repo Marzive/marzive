@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BottomNav from '../components/BottomNav';
 import './Home.css';
 
 const Home = () => {
+  const [userData, setUserData] = useState({
+    username: 'User',
+    avatar: null
+  });
+
+  useEffect(() => {
+    // Get user data from Telegram WebApp
+    if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe) {
+      const telegramUser = window.Telegram.WebApp.initDataUnsafe.user;
+      if (telegramUser) {
+        setUserData({
+          username: telegramUser.username || `${telegramUser.first_name || ''} ${telegramUser.last_name || ''}`.trim() || 'User',
+          avatar: telegramUser.photo_url || null
+        });
+      }
+    }
+  }, []);
+
   return (
     <div className="home-container">
       <div className="header">
         <div className="user-info">
-          <img src="/placeholder-avatar.jpg" alt="" className="avatar" />
-          <span className="username">Feranmi Eth</span>
+          {userData.avatar ? (
+            <img src={userData.avatar} alt="" className="avatar" />
+          ) : (
+            <div className="avatar-placeholder">
+              {userData.username.charAt(0).toUpperCase()}
+            </div>
+          )}
+          <span className="username">{userData.username}</span>
         </div>
         <button className="invite-btn">Invite Friends</button>
       </div>

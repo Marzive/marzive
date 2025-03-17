@@ -19,11 +19,25 @@
   gap: 12px;
 }
 
-.avatar {
+.avatar, .avatar-placeholder {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #C10EC1, #670065);
 }
 
 .username {
