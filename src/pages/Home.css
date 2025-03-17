@@ -1,0 +1,142 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0E010E, #0E010E);
+  color: white;
+  padding: 20px 20px 100px;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.invite-btn {
+  background: #C10EC1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Neo Chic', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wallet-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.wallet-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.amount {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.roi {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.positive {
+  color: #4CAF50;
+}
+
+.notifications-section {
+  margin-bottom: 80px;
+}
+
+.notifications-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+.notification-content p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.open-btn {
+  background: transparent;
+  color: #C10EC1;
+  border: 1px solid #C10EC1;
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-family: 'Neo Chic', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}

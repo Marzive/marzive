@@ -1,0 +1,38 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(14, 1, 14, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 16px 24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  color: #C10EC1;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-family: 'Neo Chic', sans-serif;
+  margin-top: 2px;
+}

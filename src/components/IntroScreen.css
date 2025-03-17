@@ -1,0 +1,152 @@
+.intro-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.intro-content {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.slide-status {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.slide-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+  backdrop-filter: blur(5px);
+}
+
+.slide-icon svg {
+  width: 64px;
+  height: 64px;
+  color: white;
+}
+
+.intro-content h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Neo Chic', sans-serif;
+  line-height: 1.2;
+  color: white;
+}
+
+.intro-content p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin: 0.25rem 0 0;
+  max-width: 300px;
+  line-height: 1.4;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+}
+
+.dot {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #C10EC1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+  margin-top: auto;
+}
+
+.skip-btn, .next-btn {
+  padding: 15px 24px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
+.skip-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  flex: 1;
+}
+
+.next-btn {
+  background-color: #C10EC1;
+  color: white;
+  flex: 2;
+  justify-content: center;
+}
+
+.skip-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'Neo Chic';
+  src: url('/fonts/neochic-regular.otf') format('opentype');
+}
+
+:root {
+  --primary-color: #670065;
+  --gradient-start: #0E010E;
+  --gradient-end: #660066;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Neo Chic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +21,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.device-warning {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .device-warning {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
