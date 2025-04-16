@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaHome, FaGlobe, FaSearch, FaTrophy, FaGem } from 'react-icons/fa';
+import { FaHome, FaGlobe, FaQuestionCircle, FaMedal, FaCoins } from 'react-icons/fa';
 import './BottomNav.css';
 
 const navItems = [
   { icon: FaHome, label: 'Home', path: '/' },
   { icon: FaGlobe, label: 'Network', path: '/network' },
-  { icon: FaSearch, label: 'Search', path: '/search' },
-  { icon: FaTrophy, label: 'Rewards', path: '/rewards' },
-  { icon: FaGem, label: 'Assets', path: '/assets' }
+  { icon: FaQuestionCircle, label: 'Quest', path: '/quest' },
+  { icon: FaMedal, label: 'Ranking', path: '/ranking' },
+  { icon: FaCoins, label: 'Token', path: '/token' }
 ];
 
 const BottomNav = () => {
@@ -25,7 +25,7 @@ const BottomNav = () => {
             className={`nav-item ${isActive ? 'active' : ''}`}
           >
             <item.icon size={24} />
-            {isActive && <span className="nav-label">{item.label}</span>}
+            <span className="nav-label">{item.label}</span>
           </Link>
         );
       })}

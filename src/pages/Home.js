@@ -2,6 +2,15 @@ import React, { useEffect, useState } from 'react';
 import BottomNav from '../components/BottomNav';
 import './Home.css';
 
+const ChatIcon = () => (
+  <div className="chat-icon">
+    <div className="chat-icon-dots">
+      <div className="chat-dot"></div>
+      <div className="chat-dot"></div>
+    </div>
+  </div>
+);
+
 const Home = () => {
   const [userData, setUserData] = useState({
     username: 'User',
@@ -34,7 +43,10 @@ const Home = () => {
           )}
           <span className="username">{userData.username}</span>
         </div>
-        <button className="invite-btn">Invite Friends</button>
+        <div className="header-actions">
+          <ChatIcon />
+          <button className="invite-btn">Invite Friends</button>
+        </div>
       </div>
 
       <div className="wallet-cards">

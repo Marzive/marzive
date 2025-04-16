@@ -154,3 +154,33 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-icon {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat-icon-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.chat-dot {
+  width: 3px;
+  height: 6px;
+  background: #0E010E;
+  border-radius: 40%;
+}

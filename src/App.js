@@ -13,23 +13,23 @@ const Network = () => (
   </div>
 );
 
-const Search = () => (
+const Quest = () => (
   <div className="page-container">
-    <div className="page-content">Search Page (Coming Soon)</div>
+    <div className="page-content">Quest Page (Coming Soon)</div>
     <BottomNav />
   </div>
 );
 
-const Rewards = () => (
+const Ranking = () => (
   <div className="page-container">
-    <div className="page-content">Rewards Page (Coming Soon)</div>
+    <div className="page-content">Ranking Page (Coming Soon)</div>
     <BottomNav />
   </div>
 );
 
-const Assets = () => (
+const Token = () => (
   <div className="page-container">
-    <div className="page-content">Assets Page (Coming Soon)</div>
+    <div className="page-content">Token Page (Coming Soon)</div>
     <BottomNav />
   </div>
 );
@@ -63,9 +63,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/network" element={<Network />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/rewards" element={<Rewards />} />
-        <Route path="/assets" element={<Assets />} />
+        <Route path="/quest" element={<Quest />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/token" element={<Token />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
