@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import IntroScreen from './components/IntroScreen';
 import Home from './pages/Home';
 import BottomNav from './components/BottomNav';
+import ChatInterface from './components/ChatInterface';
 import './App.css';
 
 // Placeholder components for other pages
@@ -33,6 +34,11 @@ const Token = () => (
     <BottomNav />
   </div>
 );
+
+// Check if current path should show bottom nav
+const shouldShowBottomNav = (path) => {
+  return path !== '/chat';
+};
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -66,6 +72,7 @@ function App() {
         <Route path="/quest" element={<Quest />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/token" element={<Token />} />
+        <Route path="/chat" element={<ChatInterface />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

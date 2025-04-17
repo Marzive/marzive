@@ -1,0 +1,145 @@
+.invite-sheet-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.invite-sheet-container.open {
+  pointer-events: auto;
+}
+
+.invite-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invite-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(14, 1, 14, 0.98) 0%, rgba(14, 1, 14, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  will-change: transform;
+  overflow-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sheet-indicator {
+  width: 205px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  margin-top: 130px;
+}
+
+.swipe-instruction {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 12px;
+  margin-bottom: 80px;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+.sheet-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+.invite-link-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 480px;
+  background-color: rgba(14, 1, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 14px 12px 14px 20px;
+  margin-bottom: 16px;
+}
+
+.invite-link {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #C10EC1;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 16px;
+}
+
+.copy-button:hover {
+  background-color: #a10aa1;
+}
+
+.copy-success-toast {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(19, 206, 102, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeInOut 2s ease;
+  z-index: 100;
+  white-space: nowrap;
+  font-family: 'Neo Chic', sans-serif;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  85% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -10px); }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .sheet-indicator {
+    margin-top: 80px;
+  }
+
+  .invite-link-container {
+    width: 90%;
+  }
+}

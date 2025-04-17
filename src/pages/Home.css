@@ -161,6 +161,11 @@
   gap: 12px;
 }
 
+.chat-icon-link {
+  text-decoration: none;
+  display: flex;
+}
+
 .chat-icon {
   width: 25px;
   height: 25px;

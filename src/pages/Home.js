@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import BottomNav from '../components/BottomNav';
+import InviteSheet from '../components/InviteSheet';
 import './Home.css';
 
 const ChatIcon = () => (
-  <div className="chat-icon">
-    <div className="chat-icon-dots">
-      <div className="chat-dot"></div>
-      <div className="chat-dot"></div>
+  <Link to="/chat" className="chat-icon-link">
+    <div className="chat-icon">
+      <div className="chat-icon-dots">
+        <div className="chat-dot"></div>
+        <div className="chat-dot"></div>
+      </div>
     </div>
-  </div>
+  </Link>
 );
 
 const Home = () => {
@@ -16,6 +20,7 @@ const Home = () => {
     username: 'User',
     avatar: null
   });
+  const [showInviteSheet, setShowInviteSheet] = useState(false);
 
   useEffect(() => {
     // Get user data from Telegram WebApp
@@ -29,6 +34,14 @@ const Home = () => {
       }
     }
   }, []);
+
+  const handleOpenInviteSheet = () => {
+    setShowInviteSheet(true);
+  };
+
+  const handleCloseInviteSheet = () => {
+    setShowInviteSheet(false);
+  };
 
   return (
     <div className="home-container">
@@ -45,7 +58,7 @@ const Home = () => {
         </div>
         <div className="header-actions">
           <ChatIcon />
-          <button className="invite-btn">Invite Friends</button>
+          <button className="invite-btn" onClick={handleOpenInviteSheet}>Invite Friends</button>
         </div>
       </div>
 
@@ -83,6 +96,13 @@ const Home = () => {
       </div>
 
       <BottomNav />
+
+      {/* Invite Friends Sheet */}
+      <InviteSheet
+        isOpen={showInviteSheet}
+        onClose={handleCloseInviteSheet}
+        inviteLink="https://t.me/sui_bison_bot?start=6708435548"
+      />
     </div>
   );
 };
