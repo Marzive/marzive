@@ -4,26 +4,14 @@ import IntroScreen from './components/IntroScreen';
 import Home from './pages/Home';
 import BottomNav from './components/BottomNav';
 import ChatInterface from './components/ChatInterface';
+import NetworkPage from './pages/NetworkPage';
+import Ranking from './pages/Ranking';
 import './App.css';
 
 // Placeholder components for other pages
-const Network = () => (
-  <div className="page-container">
-    <div className="page-content">Network Page (Coming Soon)</div>
-    <BottomNav />
-  </div>
-);
-
 const Quest = () => (
   <div className="page-container">
     <div className="page-content">Quest Page (Coming Soon)</div>
-    <BottomNav />
-  </div>
-);
-
-const Ranking = () => (
-  <div className="page-container">
-    <div className="page-content">Ranking Page (Coming Soon)</div>
     <BottomNav />
   </div>
 );
@@ -68,7 +56,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/network" element={<Network />} />
+        <Route path="/network" element={<NetworkPage />} />
         <Route path="/quest" element={<Quest />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/token" element={<Token />} />

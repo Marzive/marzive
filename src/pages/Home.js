@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import BottomNav from '../components/BottomNav';
 import InviteSheet from '../components/InviteSheet';
 import './Home.css';
+import ChatIcon from '../components/ChatIcon';
 
-const ChatIcon = () => (
-  <Link to="/chat" className="chat-icon-link">
-    <div className="chat-icon">
-      <div className="chat-icon-dots">
-        <div className="chat-dot"></div>
-        <div className="chat-dot"></div>
-      </div>
-    </div>
-  </Link>
-);
+
 
 const Home = () => {
   const [userData, setUserData] = useState({
@@ -45,7 +36,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div className="header">
+      <header className="header">
         <div className="user-info">
           {userData.avatar ? (
             <img src={userData.avatar} alt="" className="avatar" />
@@ -60,7 +51,7 @@ const Home = () => {
           <ChatIcon />
           <button className="invite-btn" onClick={handleOpenInviteSheet}>Invite Friends</button>
         </div>
-      </div>
+      </header>
 
       <div className="wallet-cards">
         <div className="wallet-card">
